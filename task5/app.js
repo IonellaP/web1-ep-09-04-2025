@@ -1,17 +1,8 @@
-const object = [
-    {
-        name: 'Alice',
-        age: 25
-    },
-    {
-        city: "New York",
-        country: "USA",
-    }
-];
-
-function ObjectToArray(obj) {
-    const array = obj.map(item => Object.values(item));
+function objectToArray(obj) {
+    const array = Object.entries(obj)
     console.log(array);
 }
 
-ObjectToArray(object);
+objectToArray({name: 'Alice', age: 25})
+
+objectToArray({city: 'New York', country: 'USA'})
